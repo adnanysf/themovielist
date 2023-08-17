@@ -8,7 +8,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.homebutton{
+.homebutton, .accountbutton{
     font-size: 30px;
     padding: 5px;
     font-family: 'Poppins', sans-serif;
@@ -20,7 +20,11 @@
     opacity: 0.6;
 }
 
-.homebutton:hover{
+.homebutton:hover, .accountbutton:hover{
     scale: 1.05;
     opacity: 1;
+}
+
+.accountbutton{
+    padding-right: 15px;
 }

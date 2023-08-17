@@ -12,7 +12,7 @@ export default function Home() {
           </div>
         <div className={styles.right}>
           <h1>Start Now</h1>
-          <Link href='./login' className={styles.makelist}>Make a List</Link>
+          <Link href='./createcard' className={styles.makelist}>Make a List</Link>
         </div>
       </div>
     </div>
