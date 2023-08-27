@@ -48,7 +48,7 @@
     height: 100%;
     width: 60%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 .front,.back{
@@ -71,6 +71,24 @@
     font-weight: 700;
     text-align: center;
     line-height: 50px;
+}
+
+.back{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rank1{
+    outline: none;
+    border: none;
+    font-family: 'Poppins', 'Sans-Serif';
+    margin: 5px;
+    background-color: white;
+    resize: none;
+    padding: 7px;
+    border-radius: 1em;
+    width: 80%;
+
 }
 
 .titlecontainer{
@@ -102,4 +120,5 @@
     white-space: break-spaces;
     vertical-align: middle;
     font-weight: 600;
+    resize: none;
 }

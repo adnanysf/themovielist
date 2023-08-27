@@ -25,8 +25,15 @@ export default function CreateCard(){
                 <div className={style.front}> 
                     {movietitle}
                  </div>
-                <div className={style.back}> <h1>back</h1> </div>
-    
+                <div className={style.back}>
+                    <h1>Rank</h1>
+                    <textarea className={style.rank1} placeholder='Rank One'/>
+                    <textarea className={style.rank1} placeholder='Rank Two'/>
+                    <textarea className={style.rank1} placeholder='Rank Three'/>
+                    <textarea className={style.rank1} placeholder='Rank Four'/>
+                    <textarea className={style.rank1} placeholder='Rank Five'/>
+                    </div>
+
 
             </div>
             
