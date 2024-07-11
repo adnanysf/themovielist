@@ -5,7 +5,7 @@
     height: 9.5vh;
     background-color: #272829;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
 }
 .homebutton, .accountbutton{
@@ -23,8 +23,4 @@
 .homebutton:hover, .accountbutton:hover{
     scale: 1.05;
     opacity: 1;
-}
-
-.accountbutton{
-    padding-right: 15px;
 }
