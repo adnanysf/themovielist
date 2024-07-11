@@ -55,7 +55,7 @@
 }
 
 .inputareabox h1{
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 15px;
     color: #272829;
 }
@@ -160,4 +160,10 @@
     line-height: 100px;
     margin-left: 50px;
 
+}
+
+.boxtitle{
+    text-align: center;
+    line-height: 30px; 
+    margin: 0px;
 }
