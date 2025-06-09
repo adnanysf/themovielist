@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
 
 .app{
-    width: 100%;
+    width: 50%;
     height: 9.5vh;
     background-color: #272829;
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
+    justify-content: center;
+    left: 25%;
+    position: absolute;
+    border-radius: 0px 0px 1rem 1rem;
+    z-index: 1000;
 }
 .homebutton, .accountbutton{
     font-size: 30px;

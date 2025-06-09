@@ -11,7 +11,7 @@ export default function Home() {
           <div className={styles.titlename}>The Movie List</div>
           </div>
         <div className={styles.right}>
-          <h1>Start Now</h1>
+          <h1 style={{userSelect: 'none', cursor: 'default', marginTop:'5rem'}}>Start Now</h1>
           <Link href='./createcard' className={styles.makelist}>Make a List</Link>
         </div>
       </div>

@@ -3,7 +3,7 @@
     display: flex;
     margin: 0px;
     background-color: white;
-    height: 90.5vh;
+    height: 100vh;
     width: 100%;
     overflow: hidden;
 }
@@ -38,6 +38,8 @@
 
 .titlename{
     width: min-content;
+    /* cursor: default; */
+    user-select: none;
 }
 
 .right{
