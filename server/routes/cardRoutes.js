@@ -1,5 +1,6 @@
 import express from 'express';
 import supabase from '../config/supabaseClient.js';
+import rateLimit from 'express-rate-limit';
 
 const router = express.Router();
 
