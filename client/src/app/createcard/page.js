@@ -1,13 +1,31 @@
 'use client'
 import style from './create.module.css'
 import '../styles.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function CreateCard() {
     const [movietitle, setMovieTitle] = useState("")
     const [movieRanks, setMovieRanks] = useState([])
     const [currMovie, setCurrMovie] = useState("")
     const [currentIndex, setCurrentIndex] = useState(0)
+
+    useEffect(() => {
+        console.log(movieRanks)
+    }
+    , [movieRanks])
+
+    const postMovieRanks = async () => {
+        fetch('http://localhost:3100/cardapi/cards', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                title: movietitle,
+                content: movieRanks
+            })
+        })
+    }
 
     const titleChange = (event) => {
         setMovieTitle(event.target.value)
@@ -57,15 +75,22 @@ export default function CreateCard() {
         <div className={style.app}>
             <div className={style.left}>
                 <h1 className='title'>Create List.</h1>
-                <div className={style.titlecontainer}>
-                    <textarea placeholder='Movie Title' className={style.movietitle} onChange={titleChange}></textarea>
-                </div>
                 <div className={style.save}><h3>Save</h3></div>
-                <div className={style.update}><h3>Export</h3></div>
+                <div onClick={postMovieRanks} className={style.update}><h3>Export</h3></div>
             </div>
             <div className={style.cont}>
                 <div className={style.front}>
-                    {movietitle}
+                <textarea
+                            style={{border: "none", backgroundColor: "transparent", color: "black", fontSize: "1.5rem", width: "90%", height: "20%",
+                                outline: "none", textAlign: "center", padding: "0.5rem 0.5rem", wordBreak: "break-word", resize: "none",
+                                fontFamily: "inherit", boxShadow: "none", borderRadius: "0.5rem", overflowWrap: "break-word", whiteSpace: "pre-wrap",
+                                display:'block', margin: '0 auto', color: 'black', fontWeight: 'bold'
+                            }}
+                            type="text"
+                            placeholder={"Enter List Title"}
+                            value={movietitle}
+                            onChange={(e) => setMovieTitle(e.target.value)}
+                        />
                 </div>
                 <div className={style.back}>
                     <h1>Rank</h1>
