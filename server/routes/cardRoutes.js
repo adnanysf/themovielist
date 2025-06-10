@@ -18,8 +18,9 @@ router.post('/cards', async (req, res) => {
   content.map(async (item) => {
     const {movieTitle, movieRank} = item;
     const { data, error } = await supabase.from('movies').insert([{ card_id: titleData[0] ,title: movieTitle, rank: movieRank }]).select();
+    if (error) return res.status(400).json({ error: error.message });
+
   })
-  if (error) return res.status(400).json({ error: error.message });
   if (titleError) return res.status(400).json({ error: titleError.message });
     if (titleData.length === 0) {
         return res.status(400).json({ error: 'Title could not be created' });
